@@ -50,11 +50,7 @@ else:
         else:   
             Winner = "OTooley"
 
-KhanPC = format(float(round((Khan/total)*100,3)))
-
-print(KhanPC)
-
-#print to terminal
+            #print to terminal
 print ("Election Results")
 print ("-------------------------")
 print ("Total Votes: " + str(total))
