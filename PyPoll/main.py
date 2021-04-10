@@ -1,4 +1,4 @@
-# Dependencies
+#Dependencies
 import os
 import csv  
 
@@ -50,15 +50,19 @@ else:
         else:   
             Winner = "OTooley"
 
+KhanPC = format(float(round((Khan/total)*100,3)))
+
+print(KhanPC)
+
 #print to terminal
 print ("Election Results")
 print ("-------------------------")
 print ("Total Votes: " + str(total))
 print ("-------------------------")
-print("Khan: " + str(round((Khan/total)*100,3))+"% (" + str(Khan)+")")
-print("Correy: " + str(round((Correy/total)*100,3))+"% (" + str(Correy)+")")
-print("Li: " + str(round((Li/total)*100,3))+"% (" + str(Li)+")")
-print("O'Tooley " + str(round((OTooley/total)*100,3))+"% (" + str(OTooley)+")")
+print("Khan: " + str(format(round((Khan/total)*100,3),'.3f'))+"% (" + str(Khan)+")")
+print("Correy: " + str(format(round((Correy/total)*100,3),'.3f'))+"% (" + str(Correy)+")")
+print("Li: " + str(format(round((Li/total)*100,3),'.3f'))+"% (" + str(Li)+")")
+print("O'Tooley " + str(format(round((OTooley/total)*100,3),'.3f'))+"% (" + str(OTooley)+")")
 print("-------------------------")
 print("Winner: " + Winner)
 print("-------------------------")
@@ -79,13 +83,13 @@ with open(Summary, 'w') as SummaryTable:
     SummaryTable.write('\n') 
     SummaryTable.writelines("-------------------------")
     SummaryTable.write('\n') 
-    SummaryTable.writelines("Khan: " + str(round((Khan/total)*100,3))+"% (" + str(Khan)+")")
+    SummaryTable.writelines("Khan: " + str(format(round((Khan/total)*100,3),'.3f'))+"% (" + str(Khan)+")")
     SummaryTable.write('\n')
-    SummaryTable.writelines("Correy: " + str(round((Correy/total)*100,3))+"% (" + str(Correy)+")")
+    SummaryTable.writelines("Correy: " + str(format(round((Correy/total)*100,3),'.3f'))+"% (" + str(Correy)+")")
     SummaryTable.write('\n')
-    SummaryTable.writelines("Li: " + str(round((Li/total)*100,3))+"% (" + str(Li)+")")
+    SummaryTable.writelines("Li: " + str(format(round((Li/total)*100,3),'.3f'))+"% (" + str(Li)+")")
     SummaryTable.write('\n')
-    SummaryTable.writelines("O'Tooley " + str(round((OTooley/total)*100,3))+"% (" + str(OTooley)+")")
+    SummaryTable.writelines("O'Tooley " + str(format(round((OTooley/total)*100,3),'.3f'))+"% (" + str(OTooley)+")")
     SummaryTable.write('\n')
     SummaryTable.writelines("-------------------------")
     SummaryTable.write('\n')
