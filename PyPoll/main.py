@@ -4,7 +4,6 @@ import csv
 
 # Specify the file to read
 DataPath = os.path.join("Resources","election_data.csv")
-#print (DataPath)
 
 # initialize variables
 Khan = 0 #vote count for candidate Khan
@@ -21,7 +20,6 @@ with open(DataPath, 'r') as DataFile:
     
 #Read the header row and make it go to the first data row
     Header = next(VoteData)
-    #print(f"Headers: {Header}")
 
 #Doing the actual work
     for row in VoteData:
@@ -51,13 +49,6 @@ else:
             Winner = "Li"
         else:   
             Winner = "OTooley"
-
-#print("Maximum votes for a candidate: " + Winner)
-
-#print(Khan)
-#print(Correy)
-#print(Li)
-#print(OTooley)
 
 #print to terminal
 print ("Election Results")

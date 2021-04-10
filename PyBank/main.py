@@ -4,7 +4,6 @@ import csv
 
 # Specify the file to read
 DataPath = os.path.join("Resources","budget_data.csv")
-#print (DataPath)
 
 # initialize variables
 current = 0 #current month P&L
@@ -26,7 +25,6 @@ with open(DataPath, 'r') as DataFile:
     
 #Read the header row and make it go to the first data row
     Header = next(BudgetData)
-    #print(f"Headers: {Header}")
 
     
 #Doing the actual work
@@ -70,9 +68,6 @@ with open(DataPath, 'r') as DataFile:
         #when it's all done make the current prior and go around again
         prior = current
         
-        #testing!
-        #print (current, prior, change, maxinc, maxdec, months, total, changesum, maxmo, minmo, avechg)
-
 #print to terminal
 
 print("Financial Analysis")
@@ -105,8 +100,3 @@ with open(Summary, 'w') as SummaryTable:
     SummaryTable.writelines("Greatest Increase in Profits: " + str(maxmo) +", $"+ str(maxinc) )
     SummaryTable.write('\n')
     SummaryTable.writelines("Greatest Decrease in Profits: " + str(minmo) +", $"+ str(maxdec) )  
-
-   
-
- 
-    
